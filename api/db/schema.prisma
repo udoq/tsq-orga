@@ -9,23 +9,22 @@ generator client {
 }
 
 model Course {
-  id           Int      @id @default(autoincrement())
-  category     String
-  course_type  String
-  day          String
-  time         String
-  participants Member[]
+  id          String   @id @default(uuid())
+  category    String
+  course_type String
+  day         String
+  time        String
+  members     Member[]
 }
 
 model Member {
-  id          Int      @id @default(autoincrement())
-  first_name  String
-  last_name   String
-  phone       String?
-  mobil       String?
-  email       String
-  Course      Course?  @relation(fields: [courseId], references: [id])
-  courseId    Int?
+  id         String   @id @default(uuid())
+  first_name String
+  last_name  String
+  phone      String?
+  mobil      String?
+  email      String
+  Courses    Course[]
 }
 
 // model UserExample {
