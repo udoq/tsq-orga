@@ -9,11 +9,18 @@ export const QUERY = gql`
   query FindMembers {
     members {
       id
+      kd_nr
       first_name
       last_name
+      birthday
+      gender
+      street
+      zipcode
+      city
       phone
       mobil
       email
+      courseId
     }
   }
 `

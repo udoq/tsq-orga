@@ -41,6 +41,6 @@ export const deleteMember = ({ id }: Prisma.MemberWhereUniqueInput) => {
 }
 
 export const Member = {
-  Courses: (_obj, { root }: ResolverArgs<ReturnType<typeof member>>) =>
-    db.member.findUnique({ where: { id: root.id } }).Courses(),
+  Course: (_obj, { root }: ResolverArgs<ReturnType<typeof member>>) =>
+    db.member.findUnique({ where: { id: root.id } }).Course(),
 }

@@ -51,29 +51,23 @@ const Course = ({ course }) => {
     <>
       <div className="rw-segment">
         <header className="rw-segment-header">
-          <h2 className="rw-heading rw-heading-secondary">
-            Course {course.id} Detail
-          </h2>
+          <h2 className="rw-heading rw-heading-secondary">Course {course.id} Detail</h2>
         </header>
         <table className="rw-table">
           <tbody>
             <tr>
               <th>Id</th>
               <td>{course.id}</td>
-            </tr>
-            <tr>
+            </tr><tr>
               <th>Category</th>
               <td>{course.category}</td>
-            </tr>
-            <tr>
+            </tr><tr>
               <th>Course type</th>
               <td>{course.course_type}</td>
-            </tr>
-            <tr>
+            </tr><tr>
               <th>Day</th>
               <td>{course.day}</td>
-            </tr>
-            <tr>
+            </tr><tr>
               <th>Time</th>
               <td>{course.time}</td>
             </tr>

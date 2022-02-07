@@ -37,18 +37,15 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ course }: CellSuccessProps<EditCourseById>) => {
-  const [updateCourse, { loading, error }] = useMutation(
-    UPDATE_COURSE_MUTATION,
-    {
-      onCompleted: () => {
-        toast.success('Course updated')
-        navigate(routes.courses())
-      },
-      onError: (error) => {
-        toast.error(error.message)
-      },
-    }
-  )
+  const [updateCourse, { loading, error }] = useMutation(UPDATE_COURSE_MUTATION, {
+    onCompleted: () => {
+      toast.success('Course updated')
+      navigate(routes.courses())
+    },
+    onError: (error) => {
+      toast.error(error.message)
+    },
+  })
 
   const onSave = (input, id) => {
     updateCourse({ variables: { id, input } })
@@ -57,17 +54,10 @@ export const Success = ({ course }: CellSuccessProps<EditCourseById>) => {
   return (
     <div className="rw-segment">
       <header className="rw-segment-header">
-        <h2 className="rw-heading rw-heading-secondary">
-          Edit Course {course.id}
-        </h2>
+        <h2 className="rw-heading rw-heading-secondary">Edit Course {course.id}</h2>
       </header>
       <div className="rw-segment-main">
-        <CourseForm
-          course={course}
-          onSave={onSave}
-          error={error}
-          loading={loading}
-        />
+        <CourseForm course={course} onSave={onSave} error={error} loading={loading} />
       </div>
     </div>
   )

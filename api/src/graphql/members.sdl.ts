@@ -1,12 +1,19 @@
 export const schema = gql`
   type Member {
     id: String!
+    kd_nr: Int!
     first_name: String!
     last_name: String!
+    birthday: DateTime
+    gender: String
+    street: String
+    zipcode: String
+    city: String
     phone: String
     mobil: String
     email: String!
-    Courses: [Course]!
+    Course: Course
+    courseId: String
   }
 
   type Query {
@@ -15,19 +22,33 @@ export const schema = gql`
   }
 
   input CreateMemberInput {
+    kd_nr: Int!
     first_name: String!
     last_name: String!
+    birthday: DateTime
+    gender: String
+    street: String
+    zipcode: String
+    city: String
     phone: String
     mobil: String
     email: String!
+    courseId: String
   }
 
   input UpdateMemberInput {
+    kd_nr: Int
     first_name: String
     last_name: String
+    birthday: DateTime
+    gender: String
+    street: String
+    zipcode: String
+    city: String
     phone: String
     mobil: String
     email: String
+    courseId: String
   }
 
   type Mutation {

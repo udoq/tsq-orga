@@ -18,13 +18,20 @@ model Course {
 }
 
 model Member {
-  id         String   @id @default(uuid())
+  id         String    @id @default(uuid())
+  kd_nr      Int
   first_name String
   last_name  String
+  birthday   DateTime?
+  gender     String?
+  street     String?
+  zipcode    String?
+  city       String?
   phone      String?
   mobil      String?
   email      String
-  Courses    Course[]
+  Course     Course?   @relation(fields: [courseId], references: [id])
+  courseId   String?
 }
 
 // model UserExample {
@@ -32,3 +39,10 @@ model Member {
 //   email String  @unique
 //   name  String?
 // }
+
+model RW_DataMigration {
+  version    String   @id
+  name       String
+  startedAt  DateTime
+  finishedAt DateTime
+}

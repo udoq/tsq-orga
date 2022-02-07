@@ -59,11 +59,29 @@ const Member = ({ member }) => {
               <th>Id</th>
               <td>{member.id}</td>
             </tr><tr>
+              <th>Kd nr</th>
+              <td>{member.kd_nr}</td>
+            </tr><tr>
               <th>First name</th>
               <td>{member.first_name}</td>
             </tr><tr>
               <th>Last name</th>
               <td>{member.last_name}</td>
+            </tr><tr>
+              <th>Birthday</th>
+              <td>{timeTag(member.birthday)}</td>
+            </tr><tr>
+              <th>Gender</th>
+              <td>{member.gender}</td>
+            </tr><tr>
+              <th>Street</th>
+              <td>{member.street}</td>
+            </tr><tr>
+              <th>Zipcode</th>
+              <td>{member.zipcode}</td>
+            </tr><tr>
+              <th>City</th>
+              <td>{member.city}</td>
             </tr><tr>
               <th>Phone</th>
               <td>{member.phone}</td>
@@ -73,6 +91,9 @@ const Member = ({ member }) => {
             </tr><tr>
               <th>Email</th>
               <td>{member.email}</td>
+            </tr><tr>
+              <th>Course id</th>
+              <td>{member.courseId}</td>
             </tr>
           </tbody>
         </table>

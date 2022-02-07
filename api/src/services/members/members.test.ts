@@ -22,9 +22,15 @@ describe('members', () => {
 
   scenario('creates a member', async () => {
     const result = await createMember({
-      input: { first_name: 'String', last_name: 'String', email: 'String' },
+      input: {
+        kd_nr: 3952342,
+        first_name: 'String',
+        last_name: 'String',
+        email: 'String',
+      },
     })
 
+    expect(result.kd_nr).toEqual(3952342)
     expect(result.first_name).toEqual('String')
     expect(result.last_name).toEqual('String')
     expect(result.email).toEqual('String')
@@ -34,10 +40,10 @@ describe('members', () => {
     const original = await member({ id: scenario.member.one.id })
     const result = await updateMember({
       id: original.id,
-      input: { first_name: 'String2' },
+      input: { kd_nr: 3748779 },
     })
 
-    expect(result.first_name).toEqual('String2')
+    expect(result.kd_nr).toEqual(3748779)
   })
 
   scenario('deletes a member', async (scenario: StandardScenario) => {

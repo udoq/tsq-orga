@@ -8,7 +8,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "0.42.1"
+    "@redwoodjs/core": "0.42.1",
+    "prisma": "^3.9.1"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
@@ -20,5 +21,8 @@
   },
   "prisma": {
     "seed": "yarn rw exec seed"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.9.1"
   }
 }

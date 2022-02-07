@@ -65,11 +65,18 @@ const MembersList = ({ members }) => {
         <thead>
           <tr>
             <th>Id</th>
+            <th>Kd nr</th>
             <th>First name</th>
             <th>Last name</th>
+            <th>Birthday</th>
+            <th>Gender</th>
+            <th>Street</th>
+            <th>Zipcode</th>
+            <th>City</th>
             <th>Phone</th>
             <th>Mobil</th>
             <th>Email</th>
+            <th>Course id</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -77,11 +84,18 @@ const MembersList = ({ members }) => {
           {members.map((member) => (
             <tr key={member.id}>
               <td>{truncate(member.id)}</td>
+              <td>{truncate(member.kd_nr)}</td>
               <td>{truncate(member.first_name)}</td>
               <td>{truncate(member.last_name)}</td>
+              <td>{timeTag(member.birthday)}</td>
+              <td>{truncate(member.gender)}</td>
+              <td>{truncate(member.street)}</td>
+              <td>{truncate(member.zipcode)}</td>
+              <td>{truncate(member.city)}</td>
               <td>{truncate(member.phone)}</td>
               <td>{truncate(member.mobil)}</td>
               <td>{truncate(member.email)}</td>
+              <td>{truncate(member.courseId)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link
