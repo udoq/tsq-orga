@@ -19,7 +19,7 @@ model Course {
 
 model Member {
   id         String    @id @default(uuid())
-  kd_nr      Int
+  kd_nr      Int?
   first_name String
   last_name  String
   birthday   DateTime?

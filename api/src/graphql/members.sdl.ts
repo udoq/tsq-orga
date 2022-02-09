@@ -1,7 +1,7 @@
 export const schema = gql`
   type Member {
     id: String!
-    kd_nr: Int!
+    kd_nr: Int
     first_name: String!
     last_name: String!
     birthday: DateTime
@@ -22,7 +22,7 @@ export const schema = gql`
   }
 
   input CreateMemberInput {
-    kd_nr: Int!
+    kd_nr: Int
     first_name: String!
     last_name: String!
     birthday: DateTime

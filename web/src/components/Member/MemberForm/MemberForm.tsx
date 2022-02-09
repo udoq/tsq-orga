@@ -42,7 +42,6 @@ const MemberForm = (props) => {
           defaultValue={props.member?.kd_nr}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
         />
         <FieldError name="kd_nr" className="rw-field-error" />
 
