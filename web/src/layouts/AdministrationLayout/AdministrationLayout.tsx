@@ -17,6 +17,15 @@ const AdministrationLayout = ({ children }) => {
             <li>
               <Link to={routes.about()}>About</Link>
             </li>
+            <li>
+              <Link to={routes.courses()}>Kurse</Link>
+            </li>
+            <li>
+              <Link to={routes.members()}>Mitglieder</Link>
+            </li>
+            <li>
+              <Link to={routes.courselist()}>Kurslisten</Link>
+            </li>
           </ul>
         </nav>
       </header>

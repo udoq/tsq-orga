@@ -15,6 +15,8 @@ import AdministrationLayout from './layouts/AdministrationLayout/AdministrationL
 const Routes = () => {
   return (
     <Router>
+      <Route path="/courselist" page={CourselistPage} name="courselist" />
+      <Route path="/list" page={AboutPage} name="about" />
       <Set wrap={MembersLayout}>
         <Route path="/members/new" page={MemberNewMemberPage} name="newMember" />
         <Route path="/members/{id}/edit" page={MemberEditMemberPage} name="editMember" />
